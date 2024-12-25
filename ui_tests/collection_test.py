@@ -23,17 +23,14 @@ class ButtonTest:
             time.sleep(2)
             action = ActionChains(self.driver)
 
-            # Double click
             double_click_btn = self.driver.find_element(By.ID, "doubleClickBtn")
             action.double_click(double_click_btn).perform()
             print("Double click performed.")
 
-            # Right click
             right_click_btn = self.driver.find_element(By.ID, "rightClickBtn")
             action.context_click(right_click_btn).perform()
             print("Right click performed.")
 
-            # Single click
             single_click_btn = self.driver.find_element(By.XPATH, "//button[text()='Click Me']")
             single_click_btn.click()
             print("Single click performed.")
